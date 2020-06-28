@@ -1,0 +1,113 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html{
+    height: 100%;
+}
+#form{
+    position: relative;
+    margin: 40px auto;
+    width: 400px;
+}
+h1, h2{
+    text-align: center;
+}
+#form fieldset{
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    margin:0 auto;
+    font-size: 0.9em;
+    text-transform: capitalize;
+}
+#form fieldset:not(:first-of-type){
+    display: none;
+}
+#form input, #form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#form .action-btn{
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+    margin: 10px 5px;
+    font-size: 0.9em;
+    border-radius: 1em;
+    float: right;
+}
+.fieldtitle {
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.sub-title {
+	font-weight: normal;
+	font-size:15px;
+	color: #666;
+	margin-bottom: 20px;
+}
+.progressbar li{
+	list-style-type: none;
+	float: left;
+	width:22.55%;
+	position: relative;
+	text-align: center;
+}
+.container{
+	width: 100%;
+	margin-left:15px;
+
+}
+.progressbar li::before {
+	content:counter(step);
+	counter-increment: step;
+	width: 40px;
+	height:40px;
+	border: 1px solid #666;
+	display: block;
+	text-align: center;
+	margin: 0 auto 10px auto;
+	border-radius:50%;
+	line-height:40px;
+	background-color: white;
+}
+.progressbar{
+	counter-reset: step;
+}
+.progressbar li::after{
+	width: 100%;
+	top:20px;
+	left:-50%;
+	content:'';
+	height: 2px;
+	position: absolute;
+	background: #ddd;
+	z-index:-1;
+}
+.progressbar li:first-child::after{
+	content:none;
+}
+.progressbar li.active::before, .progressbar li.active::after{
+	background: #27AE60;
+	color: white;
+}

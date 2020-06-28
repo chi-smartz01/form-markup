@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="form.css"/>
+    <script src="js/jquery.js">
+        
+    </script>
+</head>
+<body>
+    <form id="form" action="submit" method="POST">
+    <div class="container">
+        <ul class="progressbar">
+            <li class="active">personal</li>
+            <li class="">security</li>
+            <li class="">address</li>
+            <li class="">bussiness</li>
+        </ul>
+    </div>
+        <fieldset>
+            <h1 class="fieldtitle">step 1</h1>
+            <h2 class="sub-title">personal setup</h2>
+            <label>full name</label>
+            <input type="text" name="fname" placeholder="enter full name">
+            <label>gender</label>
+            <input type="text" name="fname" placeholder="select gender" list="#drop">
+            <datalist id="#drop">
+                <option>male</option>
+                <option>female</option>
+                <option>others</option>
+            </datalist>
+            <label>Any disabilties?</label>
+            <input type="text" name="disabled" placeholder="are you disabled?" list="#drop1">
+            <datalist id="#drop1">
+                <option>yes</option>
+                <option>no</option>
+            </datalist>
+
+            <input type="button" name="nxt-btn" class="nxt action-btn" value="next"/>
+
+        </fieldset>
+
+        <fieldset>
+            <h1 class="fieldtitle">step 2</h1>
+            <h2 class="sub-title">security setup</h2>
+            <label>password</label>
+            <input type="password" name="psw" placeholder="set password">
+            <label>confirm password</label>
+            <input type="password" name="psw2" placeholder="confirm password">
+            <label>email</label>
+            <input type="password" name="psw2" placeholder="your email">
+            <label>phone</label>
+            <input type="tel" name="phone" placeholder="phone no">
+
+            <input type="button" name="nxt-btn" class="prev" value="next"/>
+            <input type="button" name="nxt-btn" class="next" value="next"/>
+        </fieldset>
+
+        <fieldset>
+            <h1 class="fieldtitle">step 3</h1>
+            <h2 class="sub-title">address setup</h2>
+            <label>state</label>
+            <input type="text" name="state" placeholder="enter state">
+            <label>district</label>
+            <input type="text" name="" placeholder="enter district">
+            <label>bussiness Location</label>
+            <input type="text" name="" placeholder="enter bussiness location">
+
+            <input type="button" name="nxt-btn" class="prev" value="next"/>
+            <input type="button" name="nxt-btn" class="next" value="next"/>
+        </fieldset>
+
+        <fieldset>
+            <h1 class="fieldtitle">step 4</h1>
+            <h2 class="sub-title">bussiness setup</h2>
+            <label>name of bussiness</label>
+            <input type="text" name="nob" placeholder="name of your bussiness">
+            <label>type of bussiness</label>
+            <input type="text" name="nob" placeholder="select bussiness type" list="#droptype">
+            <datalist id="#droptype">
+                <option>Proprietorship</option>
+                <option>partnership</option>
+                <option>Limited Liability Partnership</option>
+                <option>Hindu Undivided Family</option>
+                <option>Private Limited</option>
+                <option>Co-operative</option>
+                <option>Society</option>
+                <option>Trust</option>
+                <option>Self Help Group</option>
+            </datalist>
+            <label>new or existing bussiness</label>
+            <input type="text" name="nob" placeholder="select bussiness status" list="#drop2">
+            <datalist id="#drop2">
+                <option>New</option>
+                <option>Existing</option>
+            </datalist>
+            <label>bussiness start date</label>
+            <input type="date" name="date" placeholder="select date">
+            <label>social category</label>
+            <input type="text" name="soca" placeholder="select social category" list="#drop3">
+            <datalist id="#drop3">
+                <option>OBC</option>
+                <option>SC</option>
+                <option>ST</option>
+                <option>General</option>
+            </datalist>
+            <label>pincode</label>
+            <input type="text" name="" placeholder="enter pincode">
+            <label>bussiness sector</label>
+            <input type="text" name="" placeholder="select sector" list="#drop4">
+            <datalist id="#drop4">
+                <option>service</option>
+                <option>manufacturing</option>
+            </datalist>
+            <label>number of employess</label>
+            <input type="number" placeholder="enter number of employees">
+            <label>bussiness investment</label>
+            <input type="text" name="" placeholder="bussiness ivestment till date">
+            <label>Do you have GST for bussiness</label>
+            <input type="text" name="" placeholder="select if you have GST" list="#drop5">
+            <datalist id="#drop5">
+                <option>yes</option>
+                <option>no</option>
+                <option>my bussiness do not require it</option>
+            </datalist>
+
+            <input type="button" name="nxt-btn" class="cancel" value="cancel"/>
+            <input type="button" name="nxt-btn" class="proceed" value="proceed to pay"/>
+        </fieldset>
+
+    </form>
+</body>
+</html>
